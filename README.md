@@ -40,13 +40,13 @@ Once you have found the correct class, you can click on the run program button, 
    - Click the **blue link** shown next to the port your application is running on.
 
 <p align="center">
-  <img src="/workspaces/Chess-Brawl/Dell - IT Academy/Project/CleanArch/ChessBrawl/8080.png" alt="port 8080">
+  <img src="./images/8080.png" alt="port 8080">
 </p>
 
 <p>Then, you shall see the following interface:</p>
 
 <p align="center">
-  <img src="/workspaces/Chess-Brawl/Dell - IT Academy/Project/CleanArch/ChessBrawl/interfaceChessBrawl.png" alt="image print">
+  <img src="./images/interfaceChessBrawl.png" alt="image print" alt="image print">
 </p>
 
 <h3>Testing the requests</h3>
