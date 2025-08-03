@@ -1,4 +1,4 @@
-<h1 align="center">Dell - IT Academy: ChessBrawl</h1>
+<h1 align="center">ChessBrawl</h1>
 
 <p align="center"> Thomaz Abrantes de Oliveira Martinelli Silva</p>
 
