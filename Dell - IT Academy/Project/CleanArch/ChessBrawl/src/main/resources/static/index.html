@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChessBrawl</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="rei.png" alt="Rei" class="logo">
+            <h1>ChessBrawl</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-message">Welcome to ChessBrawl!</div>
+        <div id="menu">
+            <button onclick="loadPlayers()">View Players</button>
+            <button onclick="registerPlayer()">Register Player</button>
+            <button onclick="createTournament()">Create Tournament</button>
+            <button onclick="startTournament()">Begin Tournament</button>
+            <!-- <button onclick="administerBattle()">Battle Administration</button> -->
+            <button onclick="viewBattleDetails()">Battle Details</button>
+            <button onclick="registerBattleEvent()">Register a Battle Event</button>
+            <button onclick="finalizeBattle()">Finalize Battle</button>
+            <button onclick="advanceRound()">Advance Round</button>
+            <button onclick="showTournamentResults()">Tournament Results</button>
+            <button onclick="showChampion()">Champion</button>
+            <button onclick="showPlayerEvents()">Player Events</button>
+            <div id="output"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

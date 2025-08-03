@@ -1,0 +1,119 @@
+package br.pucrs.thomaz.ChessBrawl.application.dto;
+
+public class PlayerStatsDTO {
+    private Long code;
+    private String name;
+    private String nickname;
+    private int rankingPoints;
+    private int tournamentPoints;
+    private int originalMove;
+    private int mistake;
+    private int advantageousPosition;
+    private int disrespectToOpponent;
+    private int furyAttack;
+
+    public PlayerStatsDTO() {
+        // Default constructor, no parameters
+    }
+
+    public PlayerStatsDTO(Long code, String name, String nickname, int rankingPoints, int tournamentPoints, int originalMove, int mistake, int advantageousPosition, int disrespectToOpponent, int furyAttack) {
+        this.code = code;
+        this.name = name;
+        this.nickname = nickname;
+        this.rankingPoints = rankingPoints;
+        this.tournamentPoints = tournamentPoints;
+        this.originalMove = originalMove;
+        this.mistake = mistake;
+        this.advantageousPosition = advantageousPosition;
+        this.disrespectToOpponent = disrespectToOpponent;
+        this.furyAttack = furyAttack;
+    }
+
+    public Long getCode() {
+        return code;
+    }
+
+    public void setCode(Long code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public int getRankingPoints() {
+        return rankingPoints;
+    }
+
+    public void setRankingPoints(int rankingPoints) {
+        this.rankingPoints = rankingPoints;
+    }
+
+    public int getTournamentPoints() {
+        return tournamentPoints;
+    }
+
+    public void setTournamentPoints(int tournamentPoints) {
+        this.tournamentPoints = tournamentPoints;
+    }
+
+    public int getOriginalMove() {
+        return originalMove;
+    }
+
+    public void setOriginalMove(int originalMove) {
+        this.originalMove = originalMove;
+    }
+
+    public int getMistake() {
+        return mistake;
+    }
+
+    public void setMistake(int mistake) {
+        this.mistake = mistake;
+    }
+
+    public int getAdvantageousPosition() {
+        return advantageousPosition;
+    }
+
+    public void setAdvantageousPosition(int advantageousPosition) {
+        this.advantageousPosition = advantageousPosition;
+    }
+
+    public int getDisrespectToOpponent() {
+        return disrespectToOpponent;
+    }
+
+    public void setDisrespectToOpponent(int disrespectToOpponent) {
+        this.disrespectToOpponent = disrespectToOpponent;
+    }
+
+    public int getFuryAttack() {
+        return furyAttack;
+    }
+
+    public void setFuryAttack(int furyAttack) {
+        this.furyAttack = furyAttack;
+    }
+
+    @Override
+    public String toString() {
+        return "PlayerStatsDTO [code=" + code + ", name=" + name + ", nickname=" + nickname + ", tournamentPoints=" + tournamentPoints
+                + ", originalMoves=" + originalMove + ", mistake=" + mistake + ", advantageousPosition="
+                + advantageousPosition + ", disrespectToOpponent=" + disrespectToOpponent + ", furyAttack=" + furyAttack
+                + "]";
+    }
+}

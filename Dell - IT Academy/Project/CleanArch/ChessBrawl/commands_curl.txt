@@ -1,0 +1,126 @@
+Criar novos jogadores:
+
+curl -X POST http://localhost:8080/servcad/players \
+-H "Content-Type: application/json" \
+-d '{"name": "Paulo", "nickname": "paulotop", "rankingPoints": 14900}' 
+
+curl -X POST http://localhost:8080/servcad/players \
+-H "Content-Type: application/json" \
+-d '{"name": "Roberto", "nickname": "bob34", "rankingPoints": 9000}' 
+
+curl -X POST http://localhost:8080/servcad/players \
+-H "Content-Type: application/json" \
+-d '{"name": "Frederico", "nickname": "fred2004", "rankingPoints": 13500}' 
+
+curl -X POST http://localhost:8080/servcad/players \
+-H "Content-Type: application/json" \
+-d '{"name": "Maria Isabel", "nickname": "bebel02", "rankingPoints": 14677}' 
+===========================================================================================================
+
+Criação do Torneio:
+
+curl -X POST http://localhost:8080/servcad/tournament/create \
+  -H "Content-Type: application/json" \
+  -d '["alice2310", "guga18", "joaninha_123", "liviaporto", "bob34", "paulotop", "fred2004", "bebel02"]'
+===========================================================================================================
+
+Iniciar o torneio:
+
+curl -X POST http://localhost:8080/servcad/tournament/1/start \
+  -H "Content-Type: application/json"
+===========================================================================================================
+
+Administrar uma batalha:
+
+curl -X GET "http://localhost:8080/servcad/battles/select?tournamentCode=1&roundNumber=1&battleIndex=0"
+
+curl -X GET "http://localhost:8080/servcad/battles/select?tournamentCode=1&roundNumber=1&battleIndex=1"
+
+curl -X GET "http://localhost:8080/servcad/battles/select?tournamentCode=1&roundNumber=1&battleIndex=2"
+
+curl -X GET "http://localhost:8080/servcad/battles/select?tournamentCode=1&roundNumber=1&battleIndex=3"
+
+curl -X GET "http://localhost:8080/servcad/battles/select?tournamentCode=1&roundNumber=2&battleIndex=0"
+
+curl -X GET "http://localhost:8080/servcad/battles/select?tournamentCode=1&roundNumber=2&battleIndex=1"
+
+curl -X GET "http://localhost:8080/servcad/battles/select?tournamentCode=1&roundNumber=3&battleIndex=0"
+===========================================================================================================
+
+Detalhes de uma batalha:
+
+curl -X GET "http://localhost:8080/servcad/battles/details?tournamentCode=1&roundNumber=1&battleIndex=0"
+
+curl -X GET "http://localhost:8080/servcad/battles/details?tournamentCode=1&roundNumber=1&battleIndex=1"
+
+curl -X GET "http://localhost:8080/servcad/battles/details?tournamentCode=1&roundNumber=1&battleIndex=2"
+
+curl -X GET "http://localhost:8080/servcad/battles/details?tournamentCode=1&roundNumber=1&battleIndex=3"
+
+curl -X GET "http://localhost:8080/servcad/battles/details?tournamentCode=1&roundNumber=2&battleIndex=0"
+
+curl -X GET "http://localhost:8080/servcad/battles/details?tournamentCode=1&roundNumber=2&battleIndex=1"
+
+curl -X GET "http://localhost:8080/servcad/battles/details?tournamentCode=1&roundNumber=3&battleIndex=0"
+===========================================================================================================
+
+Registro de eventos:
+
+curl -X POST "http://localhost:8080/servcad/battles/1/events?playerId=3" \
+     -H "Content-Type: application/json" \
+     -d '{"type": "ORIGINAL_MOVE"}'
+
+curl -X POST "http://localhost:8080/servcad/battles/1/events?playerId=3" \
+     -H "Content-Type: application/json" \
+     -d '{"type": "MISTAKE"}'
+
+curl -X POST "http://localhost:8080/servcad/battles/1/events?playerId=3" \
+     -H "Content-Type: application/json" \
+     -d '{"type": "ADVANTAGEOUS_POSITION"}'
+
+curl -X POST "http://localhost:8080/servcad/battles/1/events?playerId=4" \
+     -H "Content-Type: application/json" \
+     -d '{"type": "DISRESPECT_TO_OPPONENT"}'
+
+curl -X POST "http://localhost:8080/servcad/battles/1/events?playerId=4" \
+     -H "Content-Type: application/json" \
+     -d '{"type": "FURY_ATTACK"}'
+===========================================================================================================
+
+Calcula e apresenta o vencedor, Realiza o Blitz Match, se necessário 
+e Soma automaticamente 30 pontos na pontuação de cada jogador vencedor
+
+curl -X POST "http://localhost:8080/servcad/battles/1/finalize"
+
+curl -X POST "http://localhost:8080/servcad/battles/2/finalize"
+
+curl -X POST "http://localhost:8080/servcad/battles/3/finalize"
+
+curl -X POST "http://localhost:8080/servcad/battles/4/finalize"
+
+curl -X POST "http://localhost:8080/servcad/battles/5/finalize"
+
+curl -X POST "http://localhost:8080/servcad/battles/6/finalize"
+
+curl -X POST "http://localhost:8080/servcad/battles/7/finalize"
+===========================================================================================================
+
+Avançar Round:
+
+curl -X POST http://localhost:8080/servcad/tournament/1/advance
+===========================================================================================================
+
+Resultados:
+
+curl -X GET http://localhost:8080/servcad/tournament/1/results
+===========================================================================================================
+
+Ganhador:
+curl -X GET http://localhost:8080/servcad/tournament/1/champion
+===========================================================================================================
+
+Extra feature- historico de eventos por jogador:
+
+GET http://localhost:8080/servcad/players/1/events
+
+alice2310,guga18,joaninha_123,liviaporto,paulotop,bob34,fred2004,bebel02
